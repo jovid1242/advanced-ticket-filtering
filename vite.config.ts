@@ -15,6 +15,8 @@ export default defineConfig({
       '@data': path.resolve(__dirname, 'src/data'),
       '@constants': path.resolve(__dirname, 'src/constants'),
       '@services': path.resolve(__dirname, 'src/services'),
+      '@i18n': path.resolve(__dirname, 'src/i18n'),
+      '@locales': path.resolve(__dirname, 'src/locales'),
     },
   },
   css: {

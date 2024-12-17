@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import './TransferFilterStyles.scss'
 import { ITransferFilterProps } from './TransferFilterTypes'
 
@@ -5,12 +6,14 @@ const TransferFilter = ({
   selectedTransfers,
   onSelectTransfers,
 }: ITransferFilterProps) => {
+  const { t } = useTranslation()
+
   const options = [
-    { label: 'Все', value: 'all' },
-    { label: 'Без пересадок', value: '0' },
-    { label: '1 пересадка', value: '1' },
-    { label: '2 пересадки', value: '2' },
-    { label: '3 пересадки', value: '3' },
+    { label: t('All'), value: 'all' },
+    { label: t('NOTRANSFERS'), value: '0' },
+    { label: t('ONETRANSFER'), value: '1' },
+    { label: t('TWOTRANSFERS'), value: '2' },
+    { label: t('THREETRANSFERS'), value: '3' },
   ]
 
   const handleCheckboxChange = (value: string) => {
@@ -35,7 +38,7 @@ const TransferFilter = ({
     <div className="TransferFilter">
       <div className="TransferFilter-wrapper">
         <div className="TransferFilter-wrapper__head">
-          <span>КОЛИЧЕСТВО ПЕРЕСАДОК</span>
+          <span>{t('NUMBEROFTRANSFERS')}</span>
         </div>
       </div>
 

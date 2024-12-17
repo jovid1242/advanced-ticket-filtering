@@ -1,11 +1,13 @@
+import { useTranslation } from 'react-i18next'
 import dayjs from 'dayjs'
 import 'dayjs/locale/ru'
-dayjs.locale('ru')
+import 'dayjs/locale/en'
 
 import AirPlaneIcon from '@assets/airplane.svg'
 import AirLineImg from '@assets/atk.webp'
 import { ITicketCardProps } from './TicketCardTypes'
 import './TicketCardStyles.scss'
+import { useEffect } from 'react'
 
 const formatDate = (dateStr: string): string => {
   return dayjs(dateStr, 'DD.MM.YY').format('D MMMM YYYY, ddd')
@@ -25,6 +27,12 @@ const TicketCard = ({ ticket }: ITicketCardProps) => {
     symbolPrice,
   } = ticket
 
+  const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    dayjs.locale(i18n.language)
+  }, [i18n.language])
+
   return (
     <div className="TicketCard">
       <div className="TicketCard-wrapper">
@@ -35,9 +43,9 @@ const TicketCard = ({ ticket }: ITicketCardProps) => {
             className="TicketCard-header__img"
           />
           <button className="buy-button">
-            Купить
+            {t('BUY')}
             <span>
-              за {price}
+              {t('FOR')} {price}
               {symbolPrice}
             </span>
           </button>
@@ -52,7 +60,9 @@ const TicketCard = ({ ticket }: ITicketCardProps) => {
           </div>
           <div className="transfers">
             <div className="transfers__title">
-              <span>{stops} ПЕРЕСАДКА</span>
+              <span>
+                {stops} {t('TRANSFER')}
+              </span>
             </div>
             <div className="transfers__icon">
               <div className="transfers__icon-line" />

@@ -1,4 +1,6 @@
 import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
+
 import './CurrencySelectorStyles.scss'
 import { ICurrencySelectorProps } from './CurrencySelectorType'
 
@@ -7,12 +9,13 @@ const CurrencySelector = ({
   onSelectCurrency,
 }: ICurrencySelectorProps) => {
   const currencies = useMemo(() => ['RUB', 'USD', 'EUR'], [])
+  const { t } = useTranslation()
 
   return (
     <div className="CurrencySelector">
       <div className="CurrencySelector-wrapper">
         <div className="CurrencySelector-wrapper__head">
-          <span>ВАЛЮТА</span>
+          <span>{t('CURRENCY')}</span>
         </div>
         <div className="currencies-buttons">
           {currencies.map((currency) => (

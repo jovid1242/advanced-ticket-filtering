@@ -11,6 +11,8 @@
       "@data/*": ["data/*"],
       "@constants/*": ["constants/*"],
       "@services/*": ["services/*"],
+      "@i18n/*": ["i18n/*"],
+      "@locales/*": ["locales/*"],
     },
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

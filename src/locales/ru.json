@@ -1,0 +1,12 @@
+{
+  "CURRENCY": "ВАЛЮТА",
+  "NUMBEROFTRANSFERS": "КОЛИЧЕСТВО ПЕРЕСАДОК",
+  "TRANSFER": "ПЕРЕСАДКА",
+  "BUY": "Купить",
+  "FOR": "за",
+  "ALL": "Все",
+  "NOTRANSFERS": "Без пересадок",
+  "ONETRANSFER": "1 пересадка",
+  "TWOTRANSFERS": "2 пересадки",
+  "THREETRANSFERS": "3 пересадки"
+}

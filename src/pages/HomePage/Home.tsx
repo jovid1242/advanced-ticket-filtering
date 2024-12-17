@@ -4,6 +4,7 @@ import { useTicket } from '@services/Ticket'
 import CurrencySelector from '@components/CurrencySelector'
 import TicketsList from '@components/TicketsList'
 import TransferFilter from '@components/TransferFilter'
+import LanguageSwitcher from '@components/LanguageSwitcher'
 
 import './HomePageStyles.scss'
 
@@ -34,6 +35,7 @@ const Home = () => {
               selectedTransfers={selectedTransfers}
               onSelectTransfers={handleSelectTransfers}
             />
+            <LanguageSwitcher />
           </div>
           <div className="content">
             <TicketsList tickets={dataTickets} isLoading={isLoading} />

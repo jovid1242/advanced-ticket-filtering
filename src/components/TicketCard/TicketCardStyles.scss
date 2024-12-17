@@ -1,16 +1,18 @@
 @import '@styles/abstracts/_variables';
 
 .TicketCard {
-  width: 100%;
+  min-width: 650px;
   background: $white;
   border-radius: $border-radius;
 
   &-wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &-header {
-    width: 180px;
+    max-width: 180px;
+    min-width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +76,8 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      min-width: 140px;
+      max-width: 180px;
+      min-width: 180px;
     }
 
     .arrivalTime {
@@ -82,7 +85,8 @@
       justify-content: center;
       align-items: flex-end;
       flex-direction: column;
-      min-width: 140px;
+      max-width: 180px;
+      min-width: 180px;
     }
 
     .transfers {
