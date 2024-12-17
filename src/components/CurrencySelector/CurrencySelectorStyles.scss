@@ -1,0 +1,54 @@
+@import '@styles/abstracts/_variables';
+
+.CurrencySelector {
+  margin-bottom: $margin-base;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__head {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: $margin-base;
+    }
+  }
+
+  .currencies-buttons {
+    display: flex;
+    border-radius: $border-radius;
+
+    &__btn {
+      width: 100%;
+      background: $white;
+      border: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      color: $primary-color;
+      transition: 0.5s ease-in-out;
+      border: 1px solid $border-color;
+
+      &:hover {
+        transition: 0.5s ease-in-out;
+        background: $primary-hover-color;
+        border: 1px solid $primary-color;
+      }
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+
+      &.active {
+        background: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white;
+      }
+    }
+  }
+}

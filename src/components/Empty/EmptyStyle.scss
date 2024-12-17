@@ -1,0 +1,17 @@
+@import '@styles/abstracts/_variables';
+
+.Empty {
+  width: 100%;
+  height: 100vh;
+  background: $white;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

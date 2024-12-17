@@ -1,0 +1,27 @@
+@import '@styles/abstracts/_variables';
+
+.TransferFilter {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__head {
+      margin-bottom: $margin-base;
+
+      span {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .filter-options {
+    &__option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+  }
+}
