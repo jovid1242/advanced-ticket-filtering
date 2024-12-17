@@ -1,7 +1,7 @@
 import { IEmptyProps } from './EmptyTypes'
 import './EmptyStyle.scss'
 
-const Empty = ({ text }: IEmptyProps) => {
+const Empty = ({ text = 'Нет данных' }: IEmptyProps) => {
   return (
     <div className="Empty">
       <div className="Empty-wrapper">

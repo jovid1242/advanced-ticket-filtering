@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 import { useTicket } from '@services/Ticket'
 import CurrencySelector from '@components/CurrencySelector'
@@ -13,7 +13,8 @@ const Home = () => {
 
   const { useGetTickets } = useTicket()
   const { data, isLoading } = useGetTickets({ currency, selectedTransfers })
-  const dataTickets = data || []
+
+  const dataTickets = useMemo(() => data || [], [data])
 
   const handleSelectTransfers = (transfers: string[]) => {
     setSelectedTransfers(transfers)

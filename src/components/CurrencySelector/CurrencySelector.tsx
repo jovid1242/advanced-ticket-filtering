@@ -1,11 +1,12 @@
-import "./CurrencySelectorStyles.scss";
-import { ICurrencySelectorProps } from "./CurrencySelectorType";
+import { useMemo } from 'react'
+import './CurrencySelectorStyles.scss'
+import { ICurrencySelectorProps } from './CurrencySelectorType'
 
 const CurrencySelector = ({
   selectedCurrency,
   onSelectCurrency,
 }: ICurrencySelectorProps) => {
-  const currencies = ["RUB", "USD", "EUR"];
+  const currencies = useMemo(() => ['RUB', 'USD', 'EUR'], [])
 
   return (
     <div className="CurrencySelector">
@@ -18,7 +19,7 @@ const CurrencySelector = ({
             <button
               key={currency}
               className={`currencies-buttons__btn ${
-                selectedCurrency === currency ? "active" : ""
+                selectedCurrency === currency ? 'active' : ''
               }`}
               onClick={() => onSelectCurrency(currency)}
             >
@@ -28,7 +29,7 @@ const CurrencySelector = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CurrencySelector;
+export default CurrencySelector

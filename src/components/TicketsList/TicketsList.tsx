@@ -7,13 +7,13 @@ import TicketCard from '../TicketCard'
 
 import './TicketsListStyles.scss'
 
-const TicketsList = ({ tickets, isLoading }: ITicketsListProps) => {
-  if (tickets.length === 0) {
-    return <Empty text="Нет билетов, соответствующих фильтру" />
-  }
-
+const TicketsList = ({ tickets = [], isLoading }: ITicketsListProps) => {
   if (isLoading) {
     return <Loading />
+  }
+
+  if (tickets.length === 0) {
+    return <Empty text="Нет билетов, соответствующих фильтру" />
   }
 
   return (
