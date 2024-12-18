@@ -7,23 +7,5 @@
   &-wrapper {
     display: flex;
     gap: $padding-base;
-
-    .btn-lang {
-      width: 100%;
-      background: $white;
-      border: none;
-      padding: 12px 16px;
-      cursor: pointer;
-      color: $primary-color;
-      transition: 0.5s ease-in-out;
-      border: 1px solid $border-color;
-      border-radius: $border-radius;
-
-      &.active {
-        background: $secondary-color;
-        border: 1px solid $secondary-color;
-        color: $white;
-      }
-    }
   }
 }

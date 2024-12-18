@@ -1,0 +1,29 @@
+@import '@styles/abstracts/_variables';
+
+.Button {
+  width: 100%;
+  background: $white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  color: $primary-color;
+  transition: 0.5s ease-in-out;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $border-color;
+    cursor: not-allowed;
+  }
+}
+
+.Button--active {
+  background-color: $primary-color;
+  color: $white;
+}

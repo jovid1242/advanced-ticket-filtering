@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import dayjs from 'dayjs'
 import 'dayjs/locale/ru'
@@ -7,7 +8,6 @@ import AirPlaneIcon from '@assets/airplane.svg'
 import AirLineImg from '@assets/atk.webp'
 import { ITicketCardProps } from './TicketCardTypes'
 import './TicketCardStyles.scss'
-import { useEffect } from 'react'
 
 const formatDate = (dateStr: string): string => {
   return dayjs(dateStr, 'DD.MM.YY').format('D MMMM YYYY, ddd')

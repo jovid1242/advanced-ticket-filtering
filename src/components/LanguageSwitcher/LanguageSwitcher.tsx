@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { changeLanguage } from '@i18n/i18n'
+
 import './LanguageSwitcherStyles.scss'
+import Button from '@components/Button'
 
 const LanguageSwitcher = () => {
   const [currentLang, setCurrentLang] = useState(
@@ -20,18 +22,16 @@ const LanguageSwitcher = () => {
   return (
     <div className="LanguageSwitcher">
       <div className="LanguageSwitcher-wrapper">
-        <button
+        <Button
           onClick={() => handleLanguageChange('en')}
-          className={`btn-lang ${currentLang === 'en' ? 'active' : ''}`}
-        >
-          English
-        </button>
-        <button
+          label="English"
+          active={currentLang === 'en'}
+        />
+        <Button
           onClick={() => handleLanguageChange('ru')}
-          className={`btn-lang ${currentLang === 'ru' ? 'active' : ''}`}
-        >
-          Русский
-        </button>
+          label="Русский"
+          active={currentLang === 'ru'}
+        />
       </div>
     </div>
   )
